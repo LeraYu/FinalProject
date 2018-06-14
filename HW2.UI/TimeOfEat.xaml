@@ -1,0 +1,46 @@
+﻿<Window x:Class="TP.UI.TimeOfEat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP.UI"
+        mc:Ignorable="d"
+        Title="TimeOfEat" Height="476.741" Width="418.942">
+
+    <Window.Resources>
+
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="25"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Background="{TemplateBinding Background}"
+                    Height="{TemplateBinding Height}"
+                    Width="{TemplateBinding Width}" >
+                <ContentControl Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}" />
+            </Border>
+        </ControlTemplate>
+
+    </Window.Resources>
+    
+
+    <Grid Cursor="Hand">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" TileMode="FlipXY"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="141*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Choose Time of Eat" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="63" Width="300" Grid.ColumnSpan="3" FontFamily="Harlow Solid Italic" FontSize="36" Background="Transparent"/>
+        <Button Template="{StaticResource btTemplate}" Content="Breakfast" HorizontalAlignment="Left" Margin="44,113,0,0" VerticalAlignment="Top" Width="157" Click="Button_Click" Height="62" Background="#FFFAEFAF" FontFamily="Harlow Solid Italic" FontSize="24" Grid.ColumnSpan="2"/>
+
+        <Button Template="{StaticResource btTemplate}" Content="Dinner" HorizontalAlignment="Left" Margin="44,203,0,0" VerticalAlignment="Top" Width="157" Click="Button_Click_1" Height="62" Background="#FFFAEFAF" Grid.ColumnSpan="2" FontFamily="Harlow Solid Italic" FontSize="24"/>
+        <Button Template="{StaticResource btTemplate}" Content="Lunch" HorizontalAlignment="Left" Margin="44,296,0,0" VerticalAlignment="Top" Width="157" Click="Button_Click_2" Height="62" Background="#FFFAEFAF" Grid.ColumnSpan="2" FontFamily="Harlow Solid Italic" FontSize="24"/>
+        <Button Content="Back" Grid.Column="2" HorizontalAlignment="Left" Margin="56.333,409,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3" Background="Black" BorderBrush="#FF0F0E0E" Foreground="White" FontSize="18"/>
+
+    </Grid>
+</Window>
